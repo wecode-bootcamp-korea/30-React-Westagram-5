@@ -1,3 +1,5 @@
+import './Login.scss';
+
 function LoginHeesoo() {
   return (
     <>
