@@ -1,18 +1,15 @@
-// 준식's 컴포넌트
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import LoginHeesoo from './pages/heesooLee/Login/Login';
 import MainHeesoo from './pages/heesooLee/Main/Main';
 
-// 종택's 컴포넌트
 import LoginYunsook from './pages/yunsookShin/Login/Login';
 import MainYunsook from './pages/yunsookShin/Main/Main';
 
 import LoginYoojung from './pages/yoojungNoh/Login/Login';
 import MainYoojung from './pages/yoojungNoh/Main/Main';
 
-// import 한 컴포넌트에 대한 경로를 각각 설정해줍니다.
 function Router() {
   return (
     <BrowserRouter>
