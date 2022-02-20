@@ -1,5 +1,428 @@
-@mixin flexCenter {
+* {
+  font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+.main {
   display: flex;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  background-color: #fafafa;
+}
+
+.nav {
+  width: 100%;
+  height: 65px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ebe9e9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  padding: 0 260px;
+
+  .logo {
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    display: flex;
+  }
+
+  .nav-searchbar {
+    width: 260px;
+    height: 37px;
+    border-radius: 8px;
+    border: none;
+    background-color: #efefef;
+    padding-left: 20px;
+  }
+
+  input::placeholder {
+    font-size: 15px;
+  }
+
+  .nav-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    font-size: 25px;
+  }
+}
+
+.feeds {
+  display: flex;
+  flex-direction: column;
+
+  .feed-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 110px;
+    width: 600px;
+    height: 55px;
+    border: 1.5px solid #ebe9e9;
+    background-color: white;
+
+    .feed-account-image {
+      display: flex;
+      align-items: center;
+      width: 35px;
+      border-radius: 100%;
+      margin-left: 10px;
+    }
+
+    .feed-account-id {
+      font-size: 15px;
+      margin-right: 430px;
+      font-weight: bold;
+    }
+
+    .more {
+      height: 25px;
+      margin-right: 10px;
+    }
+  }
+
+  .feed-post-image {
+    display: flex;
+    margin-left: 110px;
+    width: 600px;
+  }
+
+  .feed-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 110px;
+    width: 600px;
+    border: 1.5px solid #ebe9e9;
+
+    .feed-bottom-icon {
+      width: 600px;
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 15px;
+      padding-top: 15px;
+
+      .like-icon,
+      .comment-icon,
+      .share-icon {
+        height: 30px;
+        display: flex;
+        margin-right: 15px;
+      }
+
+      .bookmark-icon {
+        height: 32px;
+        margin-left: 410px;
+      }
+    }
+
+    .feed-text {
+      display: flex;
+      flex-direction: column;
+      width: 600px;
+      margin-left: 35px;
+      margin-top: 10px;
+
+      .feed-likes {
+        font-weight: bold;
+        margin-bottom: 14px;
+      }
+
+      .id-caption {
+        display: flex;
+        padding-bottom: 20px;
+
+        .account-id {
+          font-weight: bold;
+          font-size: 14px;
+          margin-right: 5px;
+        }
+
+        .caption {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .feed-comments {
+      display: flex;
+      align-items: center;
+      width: 600px;
+      border-top: 1px solid #ebe9e9;
+
+      input {
+        width: 100%;
+        border: none;
+        background-color: #fafafa;
+        margin: 10px;
+        height: 28px;
+        font-size: 14px;
+        padding-left: 8px;
+      }
+
+      input::placeholder {
+        font-size: 14px;
+        // text-indent: 5px;
+      }
+
+      input:focus {
+        outline: 0;
+      }
+
+      .post-button {
+        border: none;
+        background-color: #fafafa;
+        padding: 0;
+        margin: 10px 15px;
+        font-weight: bold;
+        font-size: 14px;
+        color: #0d96f6;
+      }
+
+      .post-button:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.main-right {
+  width: 260px;
+  margin-left: 25px;
+  margin-right: 145px;
+  margin-top: -20px;
+
+  .my-account {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+
+    .my-account-image {
+      display: flex;
+      width: 55px;
+    }
+
+    .my-account-text {
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 18px;
+
+      .my-account-id {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .story {
+    border: 1.5px solid #ebe9e9;
+    background-color: white;
+    padding-bottom: 10px;
+    width: 280px;
+
+    .story-text {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      padding: 0 15px;
+      font-size: 14px;
+      font-weight: bold;
+
+      .story-title {
+        color: #808080e0;
+      }
+    }
+
+    .story-body {
+      .story-profile1 {
+        display: flex;
+        margin-left: 10px;
+        margin-top: 10px;
+        .story-profile1-image {
+          width: 35px;
+        }
+        .story-profile1-text {
+          margin-left: 10px;
+          font-size: 14px;
+          line-height: 17px;
+
+          .story-profile1-id {
+            font-weight: bold;
+          }
+          .story-time-uploaded {
+            font-size: 12px;
+          }
+        }
+      }
+      .story-profile2 {
+        display: flex;
+        margin-left: 12px;
+        margin-top: 10px;
+
+        .story-profile2-image {
+          width: 30px;
+        }
+        .story-profile2-text {
+          margin-left: 12px;
+          font-size: 14px;
+          line-height: 17px;
+
+          .story-profile2-id {
+            font-weight: bold;
+          }
+
+          .story-time-uploaded {
+            font-size: 12px;
+          }
+        }
+      }
+      .story-profile3 {
+        display: flex;
+        margin-left: 10px;
+        margin-top: 10px;
+        .story-profile3-image {
+          width: 35px;
+        }
+        .story-profile3-text {
+          margin-left: 10px;
+          font-size: 14px;
+          line-height: 17px;
+
+          .story-profile3-id {
+            font-weight: bold;
+          }
+
+          .story-time-uploaded {
+            font-size: 12px;
+          }
+        }
+      }
+      .story-profile4 {
+        display: flex;
+        margin-left: 10px;
+        margin-top: 10px;
+        .story-profile4-image {
+          width: 35px;
+        }
+        .story-profile4-text {
+          margin-left: 10px;
+          font-size: 14px;
+          line-height: 17px;
+
+          .story-profile4-id {
+            font-weight: bold;
+          }
+
+          .story-time-uploaded {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .suggestion {
+    border: 1.5px solid #ebe9e9;
+    width: 280px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+
+    .suggestion-title {
+      display: flex;
+      margin-top: 10px;
+      padding: 0 15px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #808080e0;
+    }
+
+    .suggestion-body {
+      .suggestion-profile1 {
+        display: flex;
+        margin-left: 10px;
+        margin-top: 10px;
+        .suggestion-profile1-image {
+          width: 30px;
+        }
+        .suggestion-profile1-text {
+          margin-left: 12px;
+          font-size: 14px;
+          line-height: 17px;
+
+          .suggestion-profile1-id {
+            font-weight: bold;
+          }
+          .suggestion-profile1-followers {
+            font-size: 12px;
+          }
+        }
+      }
+      .suggestion-profile2 {
+        display: flex;
+        margin-left: 10px;
+        margin-top: 10px;
+        .suggestion-profile2-image {
+          width: 30px;
+        }
+        .suggestion-profile2-text {
+          margin-left: 12px;
+          font-size: 14px;
+          line-height: 17px;
+
+          .suggestion-profile2-id {
+            font-weight: bold;
+          }
+          .suggestion-profile2-followers {
+            font-size: 12px;
+          }
+        }
+      }
+      .suggestion-profile3 {
+        display: flex;
+        margin-left: 10px;
+        margin-top: 10px;
+        .suggestion-profile3-image {
+          width: 30px;
+        }
+        .suggestion-profile3-text {
+          margin-left: 12px;
+          font-size: 14px;
+          line-height: 17px;
+
+          .suggestion-profile3-id {
+            font-weight: bold;
+          }
+
+          .suggestion-profile3-followers {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: 12px;
+  padding-left: 3px;
+
+  .links {
+    margin-top: 10px;
+    color: #808080be;
+    font-size: 12px;
+    line-height: 18px;
+    margin-left: 15px;
+  }
+  .copyright {
+    margin-top: 10px;
+    color: #808080be;
+    font-size: 12px;
+    margin-left: 15px;
+  }
 }

@@ -1,7 +1,19 @@
+import React from 'react';
 import './Main.scss';
+import Feeds from './component/Feeds';
+import Aside from './component/Aside';
+import Nav from './component/Nav';
 
-function MainHeesoo() {
-  return <div>hello Main</div>;
-}
+const Main = () => {
+  return (
+    <>
+      <Nav />
+      <main className="main">
+        <Feeds />
+        <Aside />
+      </main>
+    </>
+  );
+};
 
-export default MainHeesoo;
+export default Main;
