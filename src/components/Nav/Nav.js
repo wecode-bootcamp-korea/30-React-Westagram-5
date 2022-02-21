@@ -7,15 +7,15 @@ function Nav() {
     <>
       <nav>
         <div className="nav">
-          {/* <!-- 위스타그램 로고 --> */}
+          {/* <!-- 위스타그램 logo --> */}
           <h1 className="logo">westagram</h1>
           <div className="inputBox">
-            {/* <!-- 검색바 --> */}
+            {/* <!-- 검색Input --> */}
             <input type="password " id="password" placeholder="검색" />
           </div>
           <div>
             <div>
-              {/* <!-- 최상단 네비 아이콘 & 프로필이미지 --> */}
+              {/* <!--  nav 아이콘img & 프로필img --> */}
               <img className="navImg" src="/images/direct-instagram.PNG" />
               <img className="navImg" src="/images/heart.png" />
               {/* Link -> 메인 로그인화면으로 가는 "/"  &   user이미지 */}
