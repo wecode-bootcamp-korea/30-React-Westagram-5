@@ -12,9 +12,7 @@ body {
 }
 
 #root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   background-color: #fafafa;
 }
 section {
@@ -26,8 +24,8 @@ section {
     border: 1px solid #b6adad71;
     width: 400px;
     height: 450px;
-    flex-direction: column;
     margin-top: 120px;
+    flex-direction: column;
 
     h1 {
       font-family: 'Lobster', cursive;
