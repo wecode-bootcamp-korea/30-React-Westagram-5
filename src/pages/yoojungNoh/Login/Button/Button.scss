@@ -1,0 +1,24 @@
+.unActiveBtn,
+.activeBtn,
+.loginButton {
+  width: 287px;
+  height: 38px;
+  position: absolute;
+  left: 35px;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  padding-left: 8px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.unActiveBtn {
+  background-color: #b9def7;
+  color: white;
+}
+
+.activeBtn {
+  background-color: #0095f6;
+  color: white;
+}
