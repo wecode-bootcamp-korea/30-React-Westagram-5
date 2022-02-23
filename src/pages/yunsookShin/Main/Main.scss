@@ -1,5 +1,54 @@
+$theme-color: blue;
+$border-style: 1px black solid;
+
 @mixin flexCenter {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.login-contatiner {
+  // @include flex-center;
+
+  button {
+    width: 200px;
+    height: 100px;
+    background-color: $theme-color;
+
+    &:hover {
+      background-color: red;
+      cursor: pointer;
+    }
+  }
+  input {
+    background-color: $theme-color;
+    &:focus {
+      background-color: red;
+    }
+  }
+}
+
+// 변수 황룡, & 연산자, mixin 등 기본 기능 적용하기
+// Sass에는 nesting외에도 여러가지 기능이 있습니다. 공식 문서 통해서 다른 기능들도 살펴 보소 필요에 따라서 적절하게 활용해주세요.
+
+// regular css as below... remove when needed
+.login-contatiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 200px;
+  height: 100px;
+  background-color: blue;
+}
+
+button:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+input {
+  background-color: red;
 }
