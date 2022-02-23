@@ -3,13 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 import Button from './Button/Button';
 
-function Login() {
+function LoginYoojung() {
   const [idInput, setIdInput] = useState('');
   const [pwInput, setPwInput] = useState('');
 
   const navigate = useNavigate();
   const goToMain = () => {
-    navigate('/Main');
+    navigate('/main-yoojung');
   };
 
   const handleIdInput = e => {
@@ -54,4 +54,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginYoojung;
