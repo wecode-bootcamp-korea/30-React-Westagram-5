@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 import Button from './Button/Button';
@@ -8,7 +8,27 @@ function LoginYoojung() {
   const [pwInput, setPwInput] = useState('');
 
   const navigate = useNavigate();
+  const loginOn = idInput.includes('@') && pwInput.length >= 5;
+
   const goToMain = () => {
+    fetch('http://10.58.0.255:8000/users/register', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: idInput,
+        password: pwInput,
+        // name: '노유정',
+        // email: 'yoo@gamil.com',
+        // password: '127366!a',
+        // phone_number: '010-111-1111',
+      }),
+    })
+      .then(response => response.json())
+      // .then(result => console.log('결과: ', result));
+      .then(result => {
+        if (result.token) {
+          localStorage.setItem('token', result.token);
+        }
+      });
     navigate('/main-yoojung');
   };
 
@@ -19,9 +39,8 @@ function LoginYoojung() {
   const handlePwInput = e => {
     setPwInput(e.target.value);
   };
-  const loginOn = idInput.includes('@') && pwInput.length >= 5;
   return (
-    <section>
+    <section className="login">
       <article>
         <div className="loginBox">
           <h1 className="logo">Westagram</h1>
