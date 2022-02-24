@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import './Login.scss';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function LoginYunsook() {
   const [idValue, setIdValue] = useState('');
   const [pwValue, setPwValue] = useState('');
-  // const [isLogin, setLoginOn] = useState(false);
-  // const [color, setColor] = useState('#');
-  // const [navigate] = useNavigate();
+  const navigate = useNavigate();
+
   const handleIdInput = e => {
     setIdValue(e.target.value);
   };
@@ -16,24 +15,14 @@ function LoginYunsook() {
     setPwValue(e.target.value);
   };
 
-  console.log(idValue, pwValue);
-
-  // const goToMain = () => {
-  //   setLoginOn(isLoginOn);
-  // };
-  // // console.log(isLoginOn);
-
-  const onChangeBtn = () => {
-    setColor('blue');
+  const isValid = () => {
+    if (idValue.includes('@') && pwValue.length >= 8) {
+      return true;
+    }
+    return false;
   };
 
-  // function Login() {
-  //   const navigate = useNavigate();
-  //   const goToMain = () => {
-  //     navigate('/main');
-  //   };
-  // }
-
+  // fetch data with backend data
   const goToMain = () => {
     fetch('http://10.58.5.235:8000/users/signin', {
       method: 'POST',
@@ -43,17 +32,15 @@ function LoginYunsook() {
       }),
     })
       .then(response => response.json())
-      .then(result => console.log('결과: ', result));
+      .then(result => {
+        if (result.token) {
+          navigate('/main');
+        } else {
+          alert('가입된 회원이 아닙니다. 회원가입을 먼저 해주세요.');
+          // navigate('/signup');
+        }
+      });
   };
-
-  // const goToMain = {} => {
-  // if(response.message === "valid user") {
-  //   navigate('/main');
-  //   } else {
-  //     alert("가입된 회원이 아닙니다. 회원가입을 먼저 해주세요.")
-  //     navigate('/signup');
-  //   }
-  // }
 
   return (
     <div>
@@ -65,7 +52,6 @@ function LoginYunsook() {
               <form className="login-form">
                 <input
                   required
-                  maxlength="@ + 5"
                   type="type"
                   onChange={handleIdInput}
                   placeholder="전화번호, 사용자 이름또는 이메일"
@@ -77,13 +63,21 @@ function LoginYunsook() {
                   text="password"
                   onChange={handlePwInput}
                 />
-                <button type="button" className="login-btn" onClick={goToMain}>
+                <button
+                  type="button"
+                  className="login-btn"
+                  onClick={goToMain}
+                  style={isValid() ? { color: 'blue' } : { color: '#fff' }}
+                >
                   로그인
                 </button>
               </form>
             </div>
             <div className="forgot">
-              <a href="button"> 비밀번호를 잊으셨나요?</a>
+              <a href="#" className="forgot-pwd">
+                {' '}
+                비밀번호를 잊으셨나요?
+              </a>
             </div>
           </div>
         </div>

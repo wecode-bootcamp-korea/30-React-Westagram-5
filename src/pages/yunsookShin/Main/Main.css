@@ -1,196 +1,46 @@
-/* No CSS */ /*# sourceMappingURL=Main.css.map */
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.login-contatiner button {
+  width: 200px;
+  height: 100px;
+  background-color: blue;
 }
 
-.nav-left {
-  width: 1920px;
-  height: 1000px;
-  text-align: center;
-  border: 1px solid green;
+.login-contatiner button:hover {
+  background-color: red;
+  cursor: pointer;
 }
 
-.gn-container {
-  background-color: white;
-  min-height: 120vh;
+.login-contatiner input {
+  background-color: blue;
+}
+
+.login-contatiner input:focus {
+  background-color: red;
+}
+
+.login-contatiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: blue;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.gn-icon {
-  background-image: url('/public/images/feeds-image-icon.jpg');
-  background-position: 'center';
-  background-size: 'cover';
-  background-repeat: 'no-repeat';
+button {
+  width: 200px;
+  height: 100px;
+  background-color: blue;
 }
 
-.btn {
-  width: 100px;
-  height: 50px;
-}
-
-.btn p {
-  font-size: 30px;
-}
-
-.nav-search {
-  width: 80px;
-  height: 40px;
-}
-
-.nav-search .search-bar {
-  margin: 30px;
-  padding: 30px;
-}
-
-.nav-search input {
-}
-
-.nav-search span {
-}
-
-.nav-right {
-}
-
-.nav-container {
-}
-
-.nav-container span {
-}
-
-.nav-container {
-}
-
-.main {
-}
-
-.feeds {
-}
-
-.feeds-container {
-}
-
-.feeds-contatiner span {
-}
-
-.feed-container p {
-}
-
-.comments {
-}
-
-.comments-container {
-}
-
-.comments-container span {
-}
-
-.button {
+button:hover {
+  background-color: red;
+  cursor: pointer;
 }
 
 input {
+  background-color: red;
 }
-
-.comments-btn {
-}
-
-.story {
-}
-
-.story-container {
-}
-
-.story-container p {
-  font-size: 30px;
-}
-
-.story-container a {
-}
-
-.story-container img {
-}
-
-.recommendation {
-}
-
-.recommendation-container {
-}
-
-.recommendation-container p {
-}
-
-.recommendation-container a {
-}
-
-.company {
-}
-
-.link {
-  color: black;
-}
-
-.search {
-  background-image: url();
-  background-repeat: contain;
-  background-size: 80px;
-}
-
-.login-btn {
-  height: 2.5rem;
-  margin: 0.625rem 0px;
-  border: 0;
-  border-radius: 0.3125rem;
-  background-color: var(--disabled);
-  color: var(--white);
-  font-weight: 700;
-  font-size: 0.9375rem;
-}
-.find-password {
-  margin: 3.75rem 0 1.25rem 0;
-  color: #00376b;
-  text-align: center;
-  font-size: 12px;
-}
-.enabled-btn {
-  background-color: var(--enabled);
-  cursor: pointer;
-}
-.disabled-btn {
-  background-color: var(--disabled);
-  cursor: default;
-}
-.login-btn {
-  height: 2.5rem;
-  margin: 0.625rem 0px;
-  border: 0;
-  border-radius: 0.3125rem;
-  background-color: var(--disabled);
-  color: var(--white);
-  font-weight: 700;
-  font-size: 0.9375rem;
-}
-
-.find-password {
-  margin: 3.75rem 0 1.25rem 0;
-  color: #00376b;
-  text-align: center;
-  font-size: 12px;
-}
-
-.enabled-btn {
-  background-color: var(--enabled);
-  cursor: pointer;
-}
-
-.disabled-btn {
-  background-color: var(--disabled);
-  cursor: default;
-}
+/*# sourceMappingURL=Main.css.map */

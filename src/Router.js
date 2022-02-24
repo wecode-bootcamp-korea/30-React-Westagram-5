@@ -6,6 +6,7 @@ import MainHeesoo from './pages/heesooLee/Main/Main';
 
 import LoginYunsook from './pages/yunsookShin/Login/Login';
 import MainYunsook from './pages/yunsookShin/Main/Main';
+// import SignupYunsook from './pages/yunsookShin/Signup/Signup';
 
 import LoginYoojung from './pages/yoojungNoh/Login/Login';
 import MainYoojung from './pages/yoojungNoh/Main/Main';
@@ -18,6 +19,7 @@ function Router() {
         <Route path="/main-heesoo" element={<MainHeesoo />} />
         <Route path="/login-yunsook" element={<LoginYunsook />} />
         <Route path="/main-yunsook" element={<MainYunsook />} />
+        {/* <Route path="/signup-yunsook" element={<SignupYunsook />} /> */}
         <Route path="/login-yoojung" element={<LoginYoojung />} />
         <Route path="/main-yoojung" element={<MainYoojung />} />
       </Routes>
