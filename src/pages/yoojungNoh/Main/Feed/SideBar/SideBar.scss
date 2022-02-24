@@ -1,0 +1,57 @@
+.mainRight {
+  position: sticky;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 25px;
+  margin-left: 20px;
+  height: 600px;
+}
+
+.mainRightImg {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.rightImg {
+  border-radius: 30px 30px 30px 30px;
+  width: 50px;
+  height: 50px;
+  margin: 9px;
+  padding: 2px;
+  border: 2px solid rgb(206, 206, 206);
+}
+
+.profileImg {
+  border-radius: 30px 30px 30px 30px;
+  width: 35px;
+  height: 35px;
+  margin: 9px;
+  padding: 2px;
+  border: 2px solid rgb(206, 206, 206);
+}
+
+.recommendImg {
+  border-radius: 30px 30px 30px 30px;
+  width: 35px;
+  height: 35px;
+  margin: 9px;
+  padding: 2px;
+  border: 2px solid rgb(206, 206, 206);
+}
+
+.profileImg {
+  border-radius: 30px 30px 30px 30px;
+  width: 35px;
+  height: 35px;
+  margin: 9px;
+  padding: 2px;
+  border: 2px solid rgb(206, 206, 206);
+}

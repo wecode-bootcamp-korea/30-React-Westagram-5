@@ -1,0 +1,93 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.feedsMain {
+  width: 614px;
+  margin-top: 15px;
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feedIdText {
+  font-size: 15px;
+  font-weight: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.feed {
+  margin-bottom: 10px;
+}
+
+.feedIcon {
+  width: 21px;
+  height: 21px;
+}
+
+.commentTextStyle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: small;
+  margin-top: 3px;
+}
+
+.feedBottom {
+  padding-bottom: 15px;
+}
+
+.feedBottom,
+.feedBottomIcon {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.feedBottomIcon {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+img,
+button,
+.logo {
+  cursor: pointer;
+}
+
+.idStyle {
+  text-align: center;
+  font-size: medium;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+a {
+  font-size: 12px;
+}
+
+p {
+  font-size: medium;
+  font-weight: bold;
+  color: gray;
+}
+
+.recommendImg {
+  border-radius: 30px 30px 30px 30px;
+  width: 35px;
+  height: 35px;
+  margin: 9px;
+  padding: 2px;
+  border: 2px solid rgb(206, 206, 206);
+}

@@ -9,6 +9,7 @@ import MainYunsook from './pages/yunsookShin/Main/Main';
 
 import LoginYoojung from './pages/yoojungNoh/Login/Login';
 import MainYoojung from './pages/yoojungNoh/Main/Main';
+// import Nav from './components/Nav/Nav';
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
         <Route path="/main-yunsook" element={<MainYunsook />} />
         <Route path="/login-yoojung" element={<LoginYoojung />} />
         <Route path="/main-yoojung" element={<MainYoojung />} />
+        {/* <Route path="/nav" element={<Nav />} /> */}
       </Routes>
     </BrowserRouter>
   );
