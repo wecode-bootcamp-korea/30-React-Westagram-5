@@ -6,6 +6,7 @@ function Aside() {
       <div className="my-account">
         <img
           className="my-account-image"
+          alt="myaccount"
           src="/images/heesooLee/myaccount-image.png"
         />
         <div className="my-account-text">
@@ -22,6 +23,7 @@ function Aside() {
           <div className="story-profile1">
             <img
               className="story-profile1-image"
+              alt="story profile 1"
               src="/images/heesooLee/story-profile1.png"
             />
             <div className="story-profile1-text">
@@ -32,6 +34,7 @@ function Aside() {
           <div className="story-profile2">
             <img
               className="story-profile2-image"
+              alt="story profile 2"
               src="/images/heesooLee/story-profile2.png"
             />
             <div className="story-profile2-text">
@@ -42,6 +45,7 @@ function Aside() {
           <div className="story-profile3">
             <img
               className="story-profile3-image"
+              alt="story profile 3"
               src="/images/heesooLee/story-profile3.png"
             />
             <div className="story-profile3-text">
@@ -52,6 +56,7 @@ function Aside() {
           <div className="story-profile4">
             <img
               className="story-profile4-image"
+              alt="story profile 4"
               src="/images/heesooLee/story-profile4.png"
             />
             <div className="story-profile4-text">
@@ -67,20 +72,22 @@ function Aside() {
           <div className="suggestion-profile1">
             <img
               className="suggestion-profile1-image"
+              alt="suggestion profile 1"
               src="/images/heesooLee/suggestion-profile1.png"
             />
             <div className="suggestion-profile1-text">
-              <a className="suggestion-profile1-id">JinjinHeo</a>
+              <p className="suggestion-profile1-id">JinjinHeo</p>
               <p className="suggestion-profile1-followers">Suggested for you</p>
             </div>
           </div>
           <div className="suggestion-profile2">
             <img
               className="suggestion-profile2-image"
+              alt="suggestion profile 2"
               src="/images/heesooLee/suggestion-profile2.png"
             />
             <div className="suggestion-profile2-text">
-              <a className="suggestion-profile2-id">JunghwanPark</a>
+              <p className="suggestion-profile2-id">JunghwanPark</p>
               <p className="suggestion-profile2-followers">
                 Followed by ChaeminKim + 3 more
               </p>
@@ -89,10 +96,11 @@ function Aside() {
           <div className="suggestion-profile3">
             <img
               className="suggestion-profile3-image"
+              alt="suggestion profile 3"
               src="/images/heesooLee/suggestion-profile3.png"
             />
             <div className="suggestion-profile3-text">
-              <a className="suggestion-profile3-id">ChaeminKim</a>
+              <p className="suggestion-profile3-id">ChaeminKim</p>
               <p className="suggestion-profile3-followers">
                 Followed by JinjinHeo + 1 more
               </p>

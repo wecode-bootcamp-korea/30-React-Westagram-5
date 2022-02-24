@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.scss';
-import LoginToMain from './component/LoginToMain';
-import LoginInput from './component/LoginInput';
+import GoToMain from './Button/GoToMain';
+// import LoginInput from './input/LoginInput';
 
 const Login = () => {
   const [idValue, setIdValue] = useState('');
@@ -19,20 +19,20 @@ const Login = () => {
     <section>
       <div className="container">
         <h1 className="logo">Westagram</h1>
-        <LoginInput
-          name="user-id"
+        <input
+          className="user-id"
           type="text"
           placeholder="Phone number, username or email"
-          handledIdInput={handledIdInput}
+          onChange={handledIdInput}
         />
-        <LoginInput
-          name="user-pw"
+        <input
+          className="user-pw"
           type="password"
           placeholder="Password"
-          handledPwInput={handledPwInput}
+          onChange={handledPwInput}
         />
 
-        <LoginToMain idValue={idValue} passwordValue={passwordValue} />
+        <GoToMain idValue={idValue} passwordValue={passwordValue} />
         <p className="forgot">Forgot password?</p>
       </div>
     </section>

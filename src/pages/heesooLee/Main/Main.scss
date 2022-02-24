@@ -119,72 +119,15 @@
       }
     }
 
-    .feed-text {
-      display: flex;
-      flex-direction: column;
+    .feed-likes {
       width: 600px;
+      display: flex;
+      justify-content: left;
       margin-left: 35px;
       margin-top: 10px;
-
-      .feed-likes {
-        font-weight: bold;
-        margin-bottom: 14px;
-      }
-
-      .id-caption {
-        display: flex;
-        padding-bottom: 20px;
-
-        .account-id {
-          font-weight: bold;
-          font-size: 14px;
-          margin-right: 5px;
-        }
-
-        .caption {
-          font-size: 14px;
-        }
-      }
-    }
-
-    .feed-comments {
-      display: flex;
-      align-items: center;
-      width: 600px;
-      border-top: 1px solid #ebe9e9;
-
-      input {
-        width: 100%;
-        border: none;
-        background-color: #fafafa;
-        margin: 10px;
-        height: 28px;
-        font-size: 14px;
-        padding-left: 8px;
-      }
-
-      input::placeholder {
-        font-size: 14px;
-        // text-indent: 5px;
-      }
-
-      input:focus {
-        outline: 0;
-      }
-
-      .post-button {
-        border: none;
-        background-color: #fafafa;
-        padding: 0;
-        margin: 10px 15px;
-        font-weight: bold;
-        font-size: 14px;
-        color: #0d96f6;
-      }
-
-      .post-button:hover {
-        cursor: pointer;
-      }
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 14px;
     }
   }
 }
