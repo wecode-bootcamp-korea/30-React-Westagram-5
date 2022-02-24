@@ -1,8 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Feed.scss';
 import Comment from './Comment/Comment';
 
+let comment_id = 1;
+
 const Feed = () => {
+  const [isInput, setIsInput] = useState(false);
+  const [comment, setComment] = useState('');
+  const [commentList, setcommentList] = useState([]);
+
+  // const postComent = e => {
+  //   setComment(e.target.value);
+  // };
+
+  const commentInput = e => {
+    setComment(e.target.value);
+  };
+
+  const onComment = e => {
+    e.preventDefault();
+    if (comment === '') return;
+
+    setcommentList([
+      ...commentList,
+      {
+        userName: 'yoo',
+        content: comment,
+        id: comment_id,
+      },
+    ]);
+    setComment('');
+    comment_id += 1;
+  };
+
+  const onRemove = id => {
+    setcommentList(commentList.filter(comment => comment.id !== id));
+  };
+
   return (
     <section className="main">
       <div>
@@ -58,7 +92,43 @@ const Feed = () => {
                   <div className="idStyle">nyj_n</div>
                   <a>벚꽃 🌸</a>
                 </div>
-                <Comment />
+                <ul>
+                  {commentList.map((comment, index) => (
+                    <Comment
+                      key={index}
+                      id={comment_id}
+                      // name={comment.userName}
+                      comment={comment}
+                      onRemove={onRemove}
+                    />
+                  ))}
+                </ul>
+                <section className="comment">
+                  <div>
+                    <div className="commentBox">
+                      {/* <!-- 피드댓글 input --> */}
+                      <input
+                        value={comment}
+                        onKeyUp={e =>
+                          e.target.value.length > 0
+                            ? setIsInput(true)
+                            : setIsInput(false)
+                        }
+                        onChange={commentInput}
+                        id="commentInput"
+                        type="text "
+                        placeholder="댓글달기.."
+                      />
+                      <button
+                        id="commentBtn"
+                        onclick={onComment}
+                        disabled={isInput ? false : true}
+                      >
+                        게시
+                      </button>
+                    </div>
+                  </div>
+                </section>
               </div>
             </div>
           </article>

@@ -1,25 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Comment.scss';
 
-const Comment = () => {
+const Comment = ({ comment, onRemove }) => {
   return (
-    <>
-      <div className="commentViewBox">
-        <div className="commentFlex">
-          <span className="commentUser">yookiki</span>
-          <li className="commentStyle">여긴 어디?</li>
+    <div className="commentViewBox">
+      <ul>
+        return (
+        <div className="commentFlex" key={comment.key}>
+          <span className="commentUser">{comment.userName}</span>
+          <li className="commentStyle">{comment.content}</li>
+          <button className="delete" onClick={() => onRemove(comment.id)}>
+            X
+          </button>
         </div>
-      </div>
-      <section className="comment">
-        <div>
-          <div className="commentBox">
-            {/* <!-- 피드댓글 input --> */}
-            <input id="commentInput" type="text " placeholder="댓글달기.." />
-            <button id="commentBtn">게시</button>
-          </div>
-        </div>
-      </section>
-    </>
+        );
+      </ul>
+    </div>
   );
 };
 

@@ -1,7 +1,19 @@
-.main {
+main {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
   width: 100%;
+
+  .mainWrap {
+    display: flex;
+    width: 80%;
+    margin: auto;
+  }
+  .feedList {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    width: 79%;
+  }
 }
