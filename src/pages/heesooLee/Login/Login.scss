@@ -1,5 +1,83 @@
-@mixin flexCenter {
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR&display=swap');
+
+@mixin flex-center {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+
+body {
+  height: 100vh;
+}
+
+#root {
+  @include flex-center;
+  background-color: #fafafa;
+}
+section {
+  @include flex-center;
+  height: 100vh;
+
+  .container {
+    @include flex-center;
+    border: 1px solid #b6adad71;
+    width: 400px;
+    height: 450px;
+    margin-top: 120px;
+    flex-direction: column;
+
+    h1 {
+      font-family: 'Lobster', cursive;
+      font-size: 45px;
+      text-align: center;
+      margin-bottom: 50px;
+      margin-top: -0.5px;
+    }
+
+    .user-id {
+      @include flex-center;
+      margin-bottom: 7px;
+    }
+
+    .user-pw {
+      @include flex-center;
+      margin-bottom: 18px;
+    }
+
+    .login {
+      @include flex-center;
+    }
+
+    input {
+      cursor: auto;
+      border: 0.15ch solid #80808015;
+      background-color: #80808015;
+      font-size: 15px;
+      border-radius: 4px;
+      width: 280px;
+      padding: 10px 10px;
+    }
+
+    .login-button {
+      cursor: pointer;
+      width: 280px;
+      height: 30px;
+      padding: 6px 10px;
+      background-color: #1100fe;
+      border: none;
+
+      border-radius: 4px;
+      color: white;
+      font-style: bold;
+      font-size: 15px;
+    }
+    .forgot {
+      cursor: pointer;
+      font-family: 'Noto Sans KR', sans-serif;
+      margin-top: 60px;
+      font-size: 13px;
+      color: #0736a3c0;
+    }
+  }
 }

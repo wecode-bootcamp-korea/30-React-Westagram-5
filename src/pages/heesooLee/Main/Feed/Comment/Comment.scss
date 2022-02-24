@@ -1,0 +1,22 @@
+.feed-comment-box {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+
+  .feed-comment {
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+    padding-left: 15px;
+
+    .account-id {
+      font-weight: bold;
+      font-size: 14px;
+      margin-right: 5px;
+    }
+
+    .comment {
+      font-size: 14px;
+    }
+  }
+}
